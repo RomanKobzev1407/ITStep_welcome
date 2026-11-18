@@ -11,12 +11,22 @@ while True:
         continue
     if action < 3:
         name = input("Введіть ім'я: ")
+        if name == "":
+            print("Недопустиме ім'я")
+            continue
         book_name = input("Введіть назву книжки: ")
+        if book_name == "":
+            print("Недопустима назва книжки")
+            continue
     else:
         print("Дію програми завершено")
         break
     if action == 1:
         days = int(input("Кількість днів: "))
-        print(f"Книжку {book_name} видано читачеві {name} на {days} днів")
+        if days < 1 or days > 30:
+            print("Недопустима кількість днів")
+            continue
+        else:
+            print(f"Книжку {book_name} видано читачеві {name} на {days} днів")
     else:
         print(f"Читач {name} повернув книжку {book_name}")
