@@ -21,19 +21,26 @@ while True:
         count_pillow = count_lamp = count_blanket = count_keychain = 0
         continue
     elif action == 4:
-        total = (count_pillow * PRICE_PILLOW + count_blanket * PRICE_BLANKET + count_lamp * PRICE_LAMP + count_keychain * PRICE_KEYCHAIN)
+        total = (
+            count_pillow * PRICE_PILLOW
+            + count_blanket * PRICE_BLANKET
+            + count_lamp * PRICE_LAMP
+            + count_keychain * PRICE_KEYCHAIN
+        )
         if total == 0:
             print("Кошик порожній.")
             continue
         print("Вміст кошика:")
         if count_pillow > 0:
-            print(f"  подушка: {count_pillow} шт. × {PRICE_PILLOW} = {count_pillow * PRICE_PILLOW} грн")
+            print(f"{count_pillow}×{PRICE_PILLOW}={count_pillow * PRICE_PILLOW}")
         if count_blanket > 0:
-            print(f"  ковдра: {count_blanket} шт. × {PRICE_BLANKET} = {count_blanket * PRICE_BLANKET} грн")
+            print(f"{count_blanket}×{PRICE_BLANKET}={count_blanket * PRICE_BLANKET}")
         if count_lamp > 0:
-            print(f"  лампа: {count_lamp} шт. × {PRICE_LAMP} = {count_lamp * PRICE_LAMP} грн")
+            print(f"{count_lamp}×{PRICE_LAMP}={count_lamp * PRICE_LAMP}")
         if count_keychain > 0:
-            print(f"  брелок: {count_keychain} шт. × {PRICE_KEYCHAIN} = {count_keychain * PRICE_KEYCHAIN} грн")
+            print(
+                f"{count_keychain}×{PRICE_KEYCHAIN}={count_keychain * PRICE_KEYCHAIN}"
+            )
         print(f"Сума покупки: {total} грн")
         continue
     elif action == 1:

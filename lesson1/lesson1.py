@@ -23,10 +23,17 @@ print("\t- Banana")
 print("\t- Orange")
 
 # Завдання 9
-print("She said, \"Hello, World\"")
+print('She said, "Hello, World"')
 
 # Завдання 10
-print("Omelet Recipe\nProducts:\n\t- Eggs\n\t- Milk\n\t- Salt\nSteps:\n\t1. Crack the eggs\n\t2. Add milk and salt\n\t3. Mix the ingredients\n\t4. Fry the omelet")
+print("Omelet Recipe\n")
+print("Products:\n\t- Eggs\n\t- Milk\n\t- Salt\n")
+print("Steps:\n\t1.Crack eggs\n\t2.Add milk and salt\n\t3.Mix the ingredients\n\t4.Fry")
+
 
 # Завдання 11
-print("Завдання 11: Студент Роман Кобзєв \n Omelet Recipe\nProducts:\n\t- Eggs\n\t- Milk\n\t- Salt\nSteps:\n\t1. Crack the eggs\n\t2. Add milk and salt\n\t3. Mix the ingredients\n\t4. Fry the omelet \n Кінець завдання")
+print("Завдання 11: Студент Роман Кобзєв")
+print("Omelet Recipe\n")
+print("Products:\n\t- Eggs\n\t- Milk\n\t- Salt\n")
+print("Steps:\n\t1.Crack eggs\n\t2.Add milk and salt\n\t3.Mix the ingredients\n\t4.Fry")
+print("Кінець завдання")

@@ -1,26 +1,26 @@
 # Завдання 1
-'''while True:
-    grade = int(input("Введіть оцінку: "))
+"""while True:
+grade = int(input("Введіть оцінку: "))
 
-    if grade == 1:
-        print("Дуже погано")
-        break
-    elif grade == 2:
-        print("Погано")
-        break
-    elif grade == 3:
-        print("Задовільно")
-        break
-    elif grade == 4:
-        print("Добре")
-        break
-    elif grade == 5:
-        print("Чудово")
-        break'''
+if grade == 1:
+    print("Дуже погано")
+    break
+elif grade == 2:
+    print("Погано")
+    break
+elif grade == 3:
+    print("Задовільно")
+    break
+elif grade == 4:
+    print("Добре")
+    break
+elif grade == 5:
+    print("Чудово")
+    break"""
 
 # Завдання 2
 
-'''yes_count = 0
+"""yes_count = 0
 no_count = 0
 
 while True:
@@ -43,7 +43,7 @@ if yes_count > no_count:
 if yes_count < no_count:
     print("Більшість голосів \"ні\".")
 else:
-    print("Голосів \"так\" і \"ні\" порівну.")'''
+    print("Голосів \"так\" і \"ні\" порівну.")"""
 
 # Завдання 3
 

@@ -1,19 +1,20 @@
 # Завдання 1
+import random
 
-'''while True:
-    numb = int(input("Введіть число (1-9): "))
-    if numb < 1 or numb > 9:
-        print("Введено неправильне число")
-        continue
-    else:
-        for multi in range(1, 11):
-            result = numb * multi
-            print(f"{numb} * {multi} = {result}")
-        break'''
+"""while True:
+numb = int(input("Введіть число (1-9): "))
+if numb < 1 or numb > 9:
+    print("Введено неправильне число")
+    continue
+else:
+    for multi in range(1, 11):
+        result = numb * multi
+        print(f"{numb} * {multi} = {result}")
+    break"""
 
 # Завдання 2
 
-'''total = 0
+"""total = 0
 count = 0
 while True:
     grade = int(input("Введіть оцінку (1-12; 0 - кінець розрахунку): "))
@@ -27,10 +28,10 @@ while True:
         count += 1
 
 average_grade = total / count
-print(f"середня оцінка: {average_grade:.2f}")'''
+print(f"середня оцінка: {average_grade:.2f}")"""
 
 # Завдання 3
-'''while True:
+"""while True:
 
     print("Можливі дії з числами:")
     print("1. додавання")
@@ -39,7 +40,6 @@ print(f"середня оцінка: {average_grade:.2f}")'''
     print("4. ділення")
     print("5. вихід")
     action = int(input("Введіть номер дії: "))
-    
     if action < 1 or action > 5:
         print("Неправильний номер дії")
         continue
@@ -65,10 +65,10 @@ print(f"середня оцінка: {average_grade:.2f}")'''
             continue
         else:
             result = value1 / value2
-            print(f"Результат розрахунків: {result}")'''
+            print(f"Результат розрахунків: {result}")"""
 
 # Завдання 4
-'''i = 1
+"""i = 1
 while True:
     name = input("Введіть ім'я: ")
     if name == "admin":
@@ -77,11 +77,11 @@ while True:
         print(f"Учасник №{i}: {name}")
         i += 1
     if i > 3:
-        break'''
+        break"""
 
 # Завдання 5 (в завданні два номера - 4)
 
-'''import random
+"""import random
 secret_num = random.randint(0, 100)
 count = 0
 
@@ -101,11 +101,11 @@ while True:
         count += 1
     elif num_user < secret_num:
         print("Меньше ніж загадане число")
-        count += 1'''
+        count += 1"""
 
 # Завдання 6
 
-import random
+# import random
 
 count_win = 0
 count_loss = 0
@@ -119,7 +119,7 @@ while True:
     if action == 1:
         rounds = int(input("Введіть кількість раундів: "))
         for i in range(rounds):
-            print(f"Раунд №{i+1}")
+            print(f"Раунд №{i + 1}")
             word = input("Введіть слово (камінь, ножиці, папір): ")
             if word != "камінь" and word != "ножиці" and word != "папір":
                 print("Неправильне слово - програш")
@@ -127,7 +127,7 @@ while True:
                 continue
 
             computer_choice = random.choice(["камінь", "ножиці", "папір"])
-            print("Вибір компа - ",computer_choice)
+            print("Вибір компа - ", computer_choice)
             if computer_choice == "камінь":
                 if word == "ножиці":
                     print("Програш")
@@ -168,4 +168,4 @@ while True:
         break
 
 # Завдання 7
-# Дане завдання одразу було виконанно в процесі розробки програми до попереднього завдання.
+# Дане завдання було виконанно в процесі розробки програми до попереднього завдання.

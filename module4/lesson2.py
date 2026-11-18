@@ -1,28 +1,28 @@
 # Завдання 1
 
-'''name = input("Введіть своє ім'я: ")
+"""name = input("Введіть своє ім'я: ")
 while True:
     age = int(input("Введіть свій вік: "))
 
     if age > 0:
         break
 
-print(f"Привіт, {name}. Тобі {age} років.")'''
+print(f"Привіт, {name}. Тобі {age} років.")"""
 
 # Завдання 2
 
-'''goal = float(input("Цільова сума? "))
+"""goal = float(input("Цільова сума? "))
 total = 0
 while total < goal:
 
     daily_amount = float(input("Сьогоднішній вклад? "))
     total += daily_amount
 
-print(f"Мету досягнуто! У скарбничці {total} грн.")'''
+print(f"Мету досягнуто! У скарбничці {total} грн.")"""
 
 # Завдання 3
 
-'''while True:
+"""while True:
     meters = float(input("Введіть довжину в метрах: "))
 
     yards = meters / 0.9144
@@ -34,11 +34,11 @@ print(f"Мету досягнуто! У скарбничці {total} грн.")''
     answer = input("Продовжувати програму? (так/ні): ")
     if not answer == "так":
         print("Робота зупинено.")
-        break'''
+        break"""
 
 # Завдання 4
 
-'''goal = float(input("Цільова сума? "))
+"""goal = float(input("Цільова сума? "))
 total = 0
 days = 0
 while total < goal:
@@ -47,11 +47,11 @@ while total < goal:
     total += daily_amount
     days += 1
 
-print(f"Мету досягнуто за {days} днів! У скарбничці {total} грн.")'''
+print(f"Мету досягнуто за {days} днів! У скарбничці {total} грн.")"""
 
 # Завдання 5
 
-'''total_items = 0
+"""total_items = 0
 print("Додайте товари. Для завершення введіть \"stop\".")
 while True:
     item = input("Введіть товар: ")
@@ -60,7 +60,7 @@ while True:
         print("Підрахунок завершений")
 
     total_items += 1
-print(f"Всього товарів додано: {total_items}")'''
+print(f"Всього товарів додано: {total_items}")"""
 
 # Завдання 6
 
