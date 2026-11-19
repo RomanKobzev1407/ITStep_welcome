@@ -1,5 +1,4 @@
 # Завдання 1
-import random
 
 """while True:
 numb = int(input("Введіть число (1-9): "))
@@ -107,7 +106,7 @@ while True:
 
 # import random
 
-count_win = 0
+"""count_win = 0
 count_loss = 0
 count_draw = 0
 
@@ -165,7 +164,7 @@ while True:
         print(f"Кількість нічиїх: {count_draw}")
     else:
         print("Кінець сеансу.")
-        break
+        break"""
 
 # Завдання 7
 # Дане завдання було виконанно в процесі розробки програми до попереднього завдання.
