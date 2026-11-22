@@ -25,17 +25,26 @@ while True:
         print("Чотири сири – 200 грн")
         name_pizza = input("Введіть назву піци: ")
         if name_pizza == "Маргарита":
-            count_margarita = int(input("Введіть кількість: "))
+            count_margarita = int(input("Введіть кількість (0 - 15): "))
+            if count_margarita < 0 or count_margarita > 15:
+                print("Неправильна кількість")
+                continue
             order_margarita += count_margarita * PRICE_MARGARITA
             print(
                 f"Замовлено {name_pizza}, {count_margarita} шт, {order_margarita} грн"
             )
         elif name_pizza == "Пепероні":
-            count_peperoni = int(input("Введіть кількість: "))
+            count_peperoni = int(input("Введіть кількість (0 - 15): "))
+            if count_peperoni < 0 or count_peperoni > 15:
+                print("Неправильна кількість")
+                continue
             order_peperoni += count_peperoni * PRICE_PEPERONI
             print(f"Замовлено {name_pizza}, {count_peperoni} шт, {order_peperoni} грн")
         elif name_pizza == "Чотири сири":
-            count_4cheese = int(input("Введіть кількість: "))
+            count_4cheese = int(input("Введіть кількість (0 - 15): "))
+            if count_4cheese < 0 or count_4cheese > 15:
+                print("Неправильна кількість")
+                continue
             order_4cheese += count_4cheese * PRICE_4CHEESE
             print(f"Замовлено {name_pizza}, {count_4cheese} шт, {order_4cheese} грн")
         else:
