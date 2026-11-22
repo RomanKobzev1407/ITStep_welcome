@@ -15,15 +15,24 @@
 # print(f"Кількість голосних літер: {count}")
 
 # Завдання 2
-text = input("Введіть текст англійською мовою: ")
+# text = input("Введіть текст англійською мовою: ")
+#
+# while True:
+#     word = input("Введіть слово: ")
+#     if word == "EXIT":
+#         print("Завершення коригувань.")
+#         break
+#     upper_word = word.upper()
+#     if word in text:
+#         new_text = text.replace(word, upper_word)
+#         print(new_text)
+#         text = new_text
 
-while True:
-    word = input("Введіть слово: ")
-    if word == "EXIT":
-        print("Завершення коригувань.")
-        break
-    upper_word = word.upper()
-    if word in text:
-        new_text = text.replace(word, upper_word)
-        print(new_text)
-        text = new_text
+# Завдання 3
+# count_sentences = 0
+
+text = input("Введіть текст: ")
+
+count_sentences = text.count(".") + text.count("?") + text.count("!")
+
+print(f"В тексті {count_sentences} завершених речень.")
