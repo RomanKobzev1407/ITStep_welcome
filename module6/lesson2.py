@@ -9,11 +9,22 @@
 #     print(text[index])
 
 # Завдання 2
-text = input("Введіть рядок: ")
+# text = input("Введіть рядок: ")
+#
+# start = int(input("Введіть початковий індекс: "))
+# end = int(input("Введіть кінцевий індекс: "))
+#
+# segment = text[start:end]
+#
+# print(segment)
 
-start = int(input("Введіть початковий індекс: "))
-end = int(input("Введіть кінцевий індекс: "))
+# Завдання 3
+text = input("Введіть текст: ")
 
-segment = text[start:end]
+index = int(input("Введіть індекс: "))
 
-print(segment)
+segment1 = text[:index]
+segment2 = text[-index:]
+
+print(f"Перші {index} символів: {segment1}")
+print(f"Останні {index} символів: {segment2}")
