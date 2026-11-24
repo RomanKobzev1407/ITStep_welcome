@@ -53,7 +53,15 @@
 #     print("Це слово не паліндром")
 
 # Завдання 7
+# text = input("Введіть текст: ")
+# symbol = input("Введіть символ: ")
+#
+# print(text.index(symbol))
+
+# Завдання 8
 text = input("Введіть текст: ")
 symbol = input("Введіть символ: ")
-
-print(text.index(symbol))
+length_text = len(text) - 1
+for index in range(length_text):
+    if symbol == text[index]:
+        print(index)
