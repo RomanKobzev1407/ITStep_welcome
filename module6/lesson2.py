@@ -45,12 +45,13 @@
 #     print("Перший символ — не велика літера")
 
 # Завдання 6
-# word = input("Введіть слово: ")
-# word2 = word[::-1]
-# if word == word2:
-#     print("Це слово паліндром")
-# else:
-#     print("Це слово не паліндром")
+word = input("Введіть слова: ")
+word_modified = word.replace(" ", "")
+word_reversed = word_modified[::-1]
+if word_modified == word_reversed:
+    print("Це слово паліндром")
+else:
+    print("Це слово не паліндром")
 
 # Завдання 7
 # text = input("Введіть текст: ")
@@ -67,16 +68,18 @@
 #         print(index)
 
 # Завдання 9
-while True:
-    word = input("Введіть слово: ")
-    if word == "END":
-        print("Завершення вводу")
-        break
-    if word[-3:] == "ing":
-        print("Це слово відноситься до герундіїв.")
-    elif word[-2:] == "ed":
-        print("Це слово відноситься до дієслова past tense.")
-    elif word[0] in "aeiou":
-        print("Це слово починається з голосної.")
-    else:
-        print("Це слово не відноситься до перших 3-х груп.")
+# while True:
+#     word = input("Введіть слово: ")
+#     if word == "END":
+#         print("Завершення вводу")
+#         break
+#     if word[-3:] == "ing":
+#         print("Це слово відноситься до герундіїв.")
+#     elif word[-2:] == "ed":
+#         print("Це слово відноситься до дієслова past tense.")
+#     elif word[0] in "aeiou":
+#         print("Це слово починається з голосної.")
+#     else:
+#         print("Це слово не відноситься до перших 3-х груп.")
+
+# Завдання 10
