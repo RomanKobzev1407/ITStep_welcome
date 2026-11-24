@@ -61,7 +61,7 @@
 # Завдання 8
 text = input("Введіть текст: ")
 symbol = input("Введіть символ: ")
-length_text = len(text) - 1
+length_text = len(text)
 for index in range(length_text):
     if symbol == text[index]:
         print(index)
