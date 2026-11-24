@@ -19,12 +19,19 @@
 # print(segment)
 
 # Завдання 3
+# text = input("Введіть текст: ")
+#
+# index = int(input("Введіть індекс: "))
+#
+# segment1 = text[:index]
+# segment2 = text[-index:]
+#
+# print(f"Перші {index} символів: {segment1}")
+# print(f"Останні {index} символів: {segment2}")
+
+# Завдання 4
 text = input("Введіть текст: ")
-
-index = int(input("Введіть індекс: "))
-
-segment1 = text[:index]
-segment2 = text[-index:]
-
-print(f"Перші {index} символів: {segment1}")
-print(f"Останні {index} символів: {segment2}")
+if text[-1] in ".!?":
+    print("Цей текст є реченям.")
+else:
+    print("Цей текст не є реченням.")
