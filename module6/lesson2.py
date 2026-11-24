@@ -45,9 +45,15 @@
 #     print("Перший символ — не велика літера")
 
 # Завдання 6
-word = input("Введіть слово: ")
-word2 = word[::-1]
-if word == word2:
-    print("Це слово паліндром")
-else:
-    print("Це слово не паліндром")
+# word = input("Введіть слово: ")
+# word2 = word[::-1]
+# if word == word2:
+#     print("Це слово паліндром")
+# else:
+#     print("Це слово не паліндром")
+
+# Завдання 7
+text = input("Введіть текст: ")
+symbol = input("Введіть символ: ")
+
+print(text.index(symbol))
