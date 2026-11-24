@@ -59,9 +59,24 @@
 # print(text.index(symbol))
 
 # Завдання 8
-text = input("Введіть текст: ")
-symbol = input("Введіть символ: ")
-length_text = len(text)
-for index in range(length_text):
-    if symbol == text[index]:
-        print(index)
+# text = input("Введіть текст: ")
+# symbol = input("Введіть символ: ")
+# length_text = len(text)
+# for index in range(length_text):
+#     if symbol == text[index]:
+#         print(index)
+
+# Завдання 9
+while True:
+    word = input("Введіть слово: ")
+    if word == "END":
+        print("Завершення вводу")
+        break
+    if word[-3:] == "ing":
+        print("Це слово відноситься до герундіїв.")
+    elif word[-2:] == "ed":
+        print("Це слово відноситься до дієслова past tense.")
+    elif word[0] in "aeiou":
+        print("Це слово починається з голосної.")
+    else:
+        print("Це слово не відноситься до перших 3-х груп.")
