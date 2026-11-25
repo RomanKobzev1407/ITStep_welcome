@@ -136,8 +136,8 @@ if count > 0:
     part2 = word[: (length_word - count - 1)]
 else:
     new_count = -count
-    part1 = word[(new_count):]
-    part2 = word[:(new_count)]
+    part1 = word[new_count:]
+    part2 = word[:new_count]
 
 result = part1 + part2
 print(result)
