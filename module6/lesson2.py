@@ -7,7 +7,7 @@
 #     print("Неправильний індекс.")
 # else:
 #     print(text[index])
-
+#
 # Завдання 2
 # text = input("Введіть рядок: ")
 #
@@ -120,24 +120,47 @@
 #         print("Знак дії не знайдено")
 
 # Завдання 11
-text = input("Введіть текст та число: ")
+# text = input("Введіть текст та число: ")
+# length_text = len(text)
+#
+# for i in range(length_text):
+#     if text[i].isdigit() or text[i] == "-":
+#         word = text[:i]
+#         length_word = len(word)
+#         word = word.replace(" ", "")
+#         count = int(text[i:])
+#         break
+#
+# if count > 0:
+#     part1 = word[(length_word - count - 1) :]
+#     part2 = word[: (length_word - count - 1)]
+# else:
+#     new_count = -count
+#     part1 = word[new_count:]
+#     part2 = word[:new_count]
+#
+# result = part1 + part2
+# print(result)
+
+# Завдання 12
+text = input("Введіть текст: ")
+count = int(input("Введіть зміщення: "))
+
+print("Меню дій")
+print("1. Зашифрувати")
+print("2. Розшифрувати")
+action = int(input("Введіть дію: "))
 length_text = len(text)
 
+result = ""
 for i in range(length_text):
-    if text[i].isdigit() or text[i] == "-":
-        word = text[:i]
-        length_word = len(word)
-        word = word.replace(" ", "")
-        count = int(text[i:])
-        break
+    temp = ord(text[i])
 
-if count > 0:
-    part1 = word[(length_word - count - 1) :]
-    part2 = word[: (length_word - count - 1)]
-else:
-    new_count = -count
-    part1 = word[new_count:]
-    part2 = word[:new_count]
+    if action == 1:
+        temp += count
+    elif action == 2:
+        temp -= count
 
-result = part1 + part2
+    result += chr(temp)
+
 print(result)
