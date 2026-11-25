@@ -85,36 +85,59 @@
 #         print("Це слово не відноситься до перших 3-х груп.")
 
 # Завдання 10
-while True:
-    text = input("Введіть математичний вираз: ")
-    if text == "EXIT":
-        print("Розрахунки завершено.")
+# while True:
+#     text = input("Введіть математичний вираз: ")
+#     if text == "EXIT":
+#         print("Розрахунки завершено.")
+#         break
+#
+#     length_text = len(text)
+#     isresult = False
+#
+#     for i in range(length_text):
+#         if text[i] in "+-*/":
+#             action = text[i]
+#             value1 = float(text[:i])
+#             value2 = float(text[(i + 1) :])
+#
+#             if action == "+":
+#                 result = value1 + value2
+#             elif action == "-":
+#                 result = value1 - value2
+#             elif action == "*":
+#                 result = value1 * value2
+#             elif action == "/":
+#                 if value2 == 0:
+#                     print("На 0 ділити не можна")
+#                     continue
+#                 else:
+#                     result = value1 / value2
+#
+#             print(f"Результат: {result}")
+#             isresult = True
+#
+#     if not isresult:
+#         print("Знак дії не знайдено")
+
+# Завдання 11
+text = input("Введіть текст та число: ")
+length_text = len(text)
+
+for i in range(length_text):
+    if text[i].isdigit() or text[i] == "-":
+        word = text[:i]
+        length_word = len(word)
+        word = word.replace(" ", "")
+        count = int(text[i:])
         break
 
-    length_text = len(text)
-    isresult = False
+if count > 0:
+    part1 = word[(length_word - count - 1) :]
+    part2 = word[: (length_word - count - 1)]
+else:
+    new_count = -count
+    part1 = word[(new_count):]
+    part2 = word[:(new_count)]
 
-    for i in range(length_text):
-        if text[i] in "+-*/":
-            action = text[i]
-            value1 = float(text[:i])
-            value2 = float(text[(i + 1) :])
-
-            if action == "+":
-                result = value1 + value2
-            elif action == "-":
-                result = value1 - value2
-            elif action == "*":
-                result = value1 * value2
-            elif action == "/":
-                if value2 == 0:
-                    print("На 0 ділити не можна")
-                    continue
-                else:
-                    result = value1 / value2
-
-            print(f"Результат: {result}")
-            isresult = True
-
-    if not isresult:
-        print("Знак дії не знайдено")
+result = part1 + part2
+print(result)
