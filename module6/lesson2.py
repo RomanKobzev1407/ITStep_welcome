@@ -45,13 +45,13 @@
 #     print("Перший символ — не велика літера")
 
 # Завдання 6
-word = input("Введіть слова: ")
-word_modified = word.replace(" ", "")
-word_reversed = word_modified[::-1]
-if word_modified == word_reversed:
-    print("Це слово паліндром")
-else:
-    print("Це слово не паліндром")
+# word = input("Введіть слова: ")
+# word_modified = word.replace(" ", "")
+# word_reversed = word_modified[::-1]
+# if word_modified == word_reversed:
+#     print("Це слово паліндром")
+# else:
+#     print("Це слово не паліндром")
 
 # Завдання 7
 # text = input("Введіть текст: ")
@@ -70,9 +70,11 @@ else:
 # Завдання 9
 # while True:
 #     word = input("Введіть слово: ")
+#
 #     if word == "END":
 #         print("Завершення вводу")
 #         break
+#
 #     if word[-3:] == "ing":
 #         print("Це слово відноситься до герундіїв.")
 #     elif word[-2:] == "ed":
@@ -83,3 +85,36 @@ else:
 #         print("Це слово не відноситься до перших 3-х груп.")
 
 # Завдання 10
+while True:
+    text = input("Введіть математичний вираз: ")
+    if text == "EXIT":
+        print("Розрахунки завершено.")
+        break
+
+    length_text = len(text)
+    isresult = False
+
+    for i in range(length_text):
+        if text[i] in "+-*/":
+            action = text[i]
+            value1 = float(text[:i])
+            value2 = float(text[(i + 1) :])
+
+            if action == "+":
+                result = value1 + value2
+            elif action == "-":
+                result = value1 - value2
+            elif action == "*":
+                result = value1 * value2
+            elif action == "/":
+                if value2 == 0:
+                    print("На 0 ділити не можна")
+                    continue
+                else:
+                    result = value1 / value2
+
+            print(f"Результат: {result}")
+            isresult = True
+
+    if not isresult:
+        print("Знак дії не знайдено")
