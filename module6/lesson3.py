@@ -57,21 +57,35 @@
 # print(f"Від'ємні числа: {negative = }")
 
 # Завдання 4
-salaries = []
-while True:
-    salary = int(input("Введіть зарплату працівника: "))
+# salaries = []
+# while True:
+#     salary = int(input("Введіть зарплату працівника: "))
+#
+#     if salary == -1:
+#         print("Завершення введення зарплат")
+#         break
+#
+#     salaries.append(salary)
+#
+# print(f"список зарплат: {salaries = }")
+#
+# percent = int(input("Введіть відсоток зміни зарплати: "))
+# length_salaries = len(salaries)
+# for i in range(length_salaries):
+#     salaries[i] *= (100 + percent) / 100
+#
+# print(f"список нових зарплат: {salaries = }")
 
-    if salary == -1:
-        print("Завершення введення зарплат")
-        break
+# Завдання 5
+temperatures = []
+days = int(input("Введіть кількість днів: "))
 
-    salaries.append(salary)
+for i in range(days):
+    temperature = float(input(f"Введіть температуру за {i + 1}-й день: "))
+    temperatures.append(temperature)
 
-print(f"список зарплат: {salaries = }")
+print("Температури:", temperatures)
 
-percent = int(input("Введіть відсоток зміни зарплати: "))
-length_salaries = len(salaries)
-for i in range(length_salaries):
-    salaries[i] *= (100 + percent) / 100
-
-print(f"список нових зарплат: {salaries = }")
+for i in range(1, days):
+    difference = temperatures[i] - temperatures[i - 1]
+    print(f"Різниця температур між {i + 1}-м та {i}-м днями: {difference}")
