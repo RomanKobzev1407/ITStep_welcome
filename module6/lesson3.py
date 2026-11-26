@@ -39,19 +39,39 @@
 # print(f"Середній елемент списку: {med_numbers}")
 
 # Завдання 3
-positive = []
-negative = []
-while True:
-    number = int(input("Введіть число (0 для завершення): "))
+# positive = []
+# negative = []
+# while True:
+#     number = int(input("Введіть число (0 для завершення): "))
+#
+#     if number == 0:
+#         print("Завершення введення чисел")
+#         break
+#
+#     if number > 0:
+#         positive.append(number)
+#     else:
+#         negative.append(number)
+#
+# print(f"Додатні числа: {positive = }")
+# print(f"Від'ємні числа: {negative = }")
 
-    if number == 0:
-        print("Завершення введення чисел")
+# Завдання 4
+salaries = []
+while True:
+    salary = int(input("Введіть зарплату працівника: "))
+
+    if salary == -1:
+        print("Завершення введення зарплат")
         break
 
-    if number > 0:
-        positive.append(number)
-    else:
-        negative.append(number)
+    salaries.append(salary)
 
-print(f"Додатні числа: {positive = }")
-print(f"Від'ємні числа: {negative = }")
+print(f"список зарплат: {salaries = }")
+
+percent = int(input("Введіть відсоток зміни зарплати: "))
+length_salaries = len(salaries)
+for i in range(length_salaries):
+    salaries[i] *= (100 + percent) / 100
+
+print(f"список нових зарплат: {salaries = }")
