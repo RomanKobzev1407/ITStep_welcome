@@ -77,15 +77,62 @@
 # print(f"список нових зарплат: {salaries = }")
 
 # Завдання 5
-temperatures = []
-days = int(input("Введіть кількість днів: "))
+# temperatures = []
+# days = int(input("Введіть кількість днів: "))
+#
+# for i in range(days):
+#     temperature = float(input(f"Введіть температуру за {i + 1}-й день: "))
+#     temperatures.append(temperature)
+#
+# print("Температури:", temperatures)
+#
+# for i in range(1, days):
+#     difference = temperatures[i] - temperatures[i - 1]
+#     print(f"Різниця температур між {i + 1}-м та {i}-м днями: {difference}")
 
-for i in range(days):
-    temperature = float(input(f"Введіть температуру за {i + 1}-й день: "))
-    temperatures.append(temperature)
+# Завдання 6
+accounts = []
+clients = 0
 
-print("Температури:", temperatures)
+while True:
+    print("Варіанти дій")
+    print("1. Додати клієнта")
+    print("2. Видалити клієнта")
+    print("3. Поповнити рахунок")
+    print("4. Зняти кошти")
+    print("5. Вихід")
 
-for i in range(1, days):
-    difference = temperatures[i] - temperatures[i - 1]
-    print(f"Різниця температур між {i + 1}-м та {i}-м днями: {difference}")
+    action = int(input("Виберіть один з варіантів: "))
+    if action < 1 or action > 5:
+        print("Неправильна дія")
+        continue
+
+    if action == 5:
+        print("Завершення дій")
+        break
+
+    if action == 1:
+        accounts.append(0)
+        clients += 1
+
+    elif action > 1:
+        client_id = int(input("Введіть ID-клієнта: "))
+        if client_id > clients:
+            print("неправильний номер ID")
+            continue
+
+        if action == 2:
+            accounts.pop(client_id)
+            print(f"Рахунок {client_id} видалено")
+
+        elif action == 3:
+            addition = int(input("Введіть суму додавання: "))
+            accounts[client_id] += addition
+            print(f"Рахунок {client_id} тепер {accounts[client_id]}")
+
+        elif action == 4:
+            subtraction = int(input("Введіть суму зняття: "))
+            accounts[client_id] -= subtraction
+            print(f"Рахунок {client_id} тепер {accounts[client_id]}")
+
+    print(f"список рахунків {accounts = }")
