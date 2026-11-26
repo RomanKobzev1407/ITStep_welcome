@@ -143,24 +143,24 @@
 # print(result)
 
 # Завдання 12
-text = input("Введіть текст: ")
-count = int(input("Введіть зміщення: "))
-
-print("Меню дій")
-print("1. Зашифрувати")
-print("2. Розшифрувати")
-action = int(input("Введіть дію: "))
-length_text = len(text)
-
-result = ""
-for i in range(length_text):
-    temp = ord(text[i])
-
-    if action == 1:
-        temp += count
-    elif action == 2:
-        temp -= count
-
-    result += chr(temp)
-
-print(result)
+# text = input("Введіть текст: ")
+# count = int(input("Введіть зміщення: "))
+#
+# print("Меню дій")
+# print("1. Зашифрувати")
+# print("2. Розшифрувати")
+# action = int(input("Введіть дію: "))
+# length_text = len(text)
+#
+# result = ""
+# for i in range(length_text):
+#     temp = ord(text[i])
+#
+#     if action == 1:
+#         temp += count
+#     elif action == 2:
+#         temp -= count
+#
+#     result += chr(temp)
+#
+# print(result)
