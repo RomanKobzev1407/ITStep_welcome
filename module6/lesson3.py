@@ -91,15 +91,69 @@
 #     print(f"Різниця температур між {i + 1}-м та {i}-м днями: {difference}")
 
 # Завдання 6
-accounts = []
-clients = 0
+# accounts = []
+# clients = 0
+#
+# while True:
+#     print("Варіанти дій")
+#     print("1. Додати клієнта")
+#     print("2. Видалити клієнта")
+#     print("3. Поповнити рахунок")
+#     print("4. Зняти кошти")
+#     print("5. Вихід")
+#
+#     action = int(input("Виберіть один з варіантів: "))
+#     if action < 1 or action > 5:
+#         print("Неправильна дія")
+#         continue
+#
+#     if action == 5:
+#         print("Завершення дій")
+#         break
+#
+#     if action == 1:
+#         accounts.append(0)
+#         clients += 1
+#
+#     elif action > 1:
+#         client_id = int(input("Введіть ID-клієнта: "))
+#         if client_id > clients:
+#             print("неправильний номер ID")
+#             continue
+#
+#         if action == 2:
+#             accounts.pop(client_id)
+#             print(f"Рахунок {client_id} видалено")
+#
+#         elif action == 3:
+#             addition = int(input("Введіть суму додавання: "))
+#             accounts[client_id] += addition
+#             print(f"Рахунок {client_id} тепер {accounts[client_id]}")
+#
+#         elif action == 4:
+#             subtraction = int(input("Введіть суму зняття: "))
+#             accounts[client_id] -= subtraction
+#             print(f"Рахунок {client_id} тепер {accounts[client_id]}")
+#
+#     print(f"список рахунків {accounts = }")
+
+# Завдання 7
+shop_items = ["яблуко", "груша", "апельсин", "мандарин", "молоко"]
+max_items = len(shop_items)
+shop_prices = [12, 34, 21, 43, 62]
+user_items = []
+user_counts = []
 
 while True:
+    print("Доступні товари з цінами")
+    for i in range(len(shop_items)):
+        print(f"{shop_items[i]} {shop_prices[i]}")
+
     print("Варіанти дій")
-    print("1. Додати клієнта")
-    print("2. Видалити клієнта")
-    print("3. Поповнити рахунок")
-    print("4. Зняти кошти")
+    print("1. Додати товар до кошика")
+    print("2. Видалити товар з кошика")
+    print("3. Очистити кошик")
+    print("4. Вивести загальну ціну")
     print("5. Вихід")
 
     action = int(input("Виберіть один з варіантів: "))
@@ -108,31 +162,42 @@ while True:
         continue
 
     if action == 5:
-        print("Завершення дій")
+        print("Завершення покупок")
         break
 
     if action == 1:
-        accounts.append(0)
-        clients += 1
-
-    elif action > 1:
-        client_id = int(input("Введіть ID-клієнта: "))
-        if client_id > clients:
-            print("неправильний номер ID")
+        user_items.append(0)
+        user_counts.append(0)
+        user_item = int(input("Введіть індекс товару: "))
+        if user_item > max_items:
+            print("неправильний індекс товару")
             continue
+        user_items[-1] = user_item
+        count_item = int(input("Введіть кількість: "))
+        user_counts[-1] = count_item
+        print(f"Товар {user_item} додано у кошик")
+        print(f"{user_items = }")
+        print(f"{user_counts = }")
 
-        if action == 2:
-            accounts.pop(client_id)
-            print(f"Рахунок {client_id} видалено")
+    elif action == 2:
+        user_item = int(input("Введіть індекс товару у кошику: "))
+        user_items.pop(user_item)
+        user_counts.pop(user_item)
+        print(f"Товар {user_item} видалено з кошику")
+        print(f"{user_items = }")
+        print(f"{user_counts = }")
 
-        elif action == 3:
-            addition = int(input("Введіть суму додавання: "))
-            accounts[client_id] += addition
-            print(f"Рахунок {client_id} тепер {accounts[client_id]}")
+    elif action == 3:
+        for j in range(len(user_counts)):
+            user_items.pop(j)
+            user_counts.pop(j)
+        print("Товари з кошику видалені")
+        print(f"{user_items = }")
+        print(f"{user_counts = }")
 
-        elif action == 4:
-            subtraction = int(input("Введіть суму зняття: "))
-            accounts[client_id] -= subtraction
-            print(f"Рахунок {client_id} тепер {accounts[client_id]}")
-
-    print(f"список рахунків {accounts = }")
+    elif action == 4:
+        summary = 0
+        for k in range(len(user_counts)):
+            index = user_items[k]
+            summary += user_counts[k] * shop_prices[index]
+        print(f"Загальна вартість товарів у кошику: {summary}")
