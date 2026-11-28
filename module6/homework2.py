@@ -18,8 +18,22 @@
 # print(result)
 
 # Завдання 2
-word = input("Введіть слово: ")
+# word = input("Введіть слово: ")
+#
+# result = word[0].upper() + word[1:-1] + word[-1].upper()
+#
+# print(result)
 
-result = word[0].upper() + word[1:-1] + word[-1].upper()
+# Завдання 3
+word_list = []
+while True:
+    word = input("Введіть слово: ")
 
-print(result)
+    if word == "END":
+        print("Завершення вводу")
+        break
+
+    if word[0].lower() == word[-1].lower():
+        word_list.append(word)
+
+print(word_list)
